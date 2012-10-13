@@ -348,6 +348,14 @@ class Msf::Module::Platform
 	end
 
 	#
+	# MS DOS
+	#
+	class Msdos < Msf::Module::Platform
+		Rank = 100
+		Alias = "msdos"
+	end
+
+	#
 	# Cisco
 	#
 	class Cisco < Msf::Module::Platform
