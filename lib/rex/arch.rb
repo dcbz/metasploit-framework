@@ -49,7 +49,9 @@ module Arch
 			when ARCH_X86
 				[addr].pack('V')
 			when ARCH_X86_64
-				[addr].pack('Q')
+				[addr & 0xffffffff].pack("V") + [(addr >> 32)].pack("V")
+			when ARCH_X86_16
+				[addr].pack('v')
 			when ARCH_MIPS # ambiguous
 				[addr].pack('N')
 			when ARCH_MIPSBE
@@ -80,6 +82,8 @@ module Arch
 			when ARCH_X86
 				return ENDIAN_LITTLE
 			when ARCH_X86_64
+				return ENDIAN_LITTLE
+			when ARCH_X86_16
 				return ENDIAN_LITTLE
 			when ARCH_MIPS # ambiguous
 				return ENDIAN_BIG

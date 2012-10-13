@@ -66,8 +66,10 @@ LEV_3     = 3
 #
 ARCH_ANY    = '_any_'
 ARCH_X86    = 'x86'
+ARCH_X86_16 = 'x86_16'
 ARCH_X86_64 = 'x86_64'
 ARCH_X64    = 'x64' # To be used for compatability with ARCH_X86_64
+ARCH_X16    = 'x16' # To be used for compatability with ARCH_X86_16
 ARCH_MIPS   = 'mips'
 ARCH_MIPSLE = 'mipsle'
 ARCH_MIPSBE = 'mipsbe'
