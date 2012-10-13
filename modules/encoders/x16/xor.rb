@@ -41,7 +41,7 @@ class Metasploit3 < Msf::Encoder::Xor
 			"\xB9" + bc +     # mov cx, sizeof_sc
 			"\xEB\x0D" +      # jmp short 0x12
 			"\x5B" +          # pop bx
-			"\xB8NM" +  # mov ax,0xXORKEY
+			"\xB8NM" +        # mov ax,0xXORKEY
 			"\x31\x07" +      # xor [bx],ax
 			"\x83\xC3\x02" +  # add bx,byte +0x2
 			"\xE2\xF9" +      # loop 0x9
